@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package user;
+
+service UserMicroservice {
+    rpc GetOne (UserById) returns (User);
+    rpc GetAll (Empty) returns (UsersArray);
+}
+
+
+// Declare the types used above
+message Empty {}
+
+message UserById {
+    int32 id = 1;
+}
+
+message User {
+    int32 id = 1;
+    string fullName = 2;
+    string email = 3;
+    string adress = 4;
+}
+
+message UsersArray {
+    repeated User users = 1;
+}
