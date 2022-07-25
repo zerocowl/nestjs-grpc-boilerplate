@@ -1,8 +1,8 @@
 {
-  "name": "user-svc",
+  "name": "bff-api",
   "version": "0.0.1",
   "description": "",
-  "author": "zerocowl",
+  "author": "",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -18,20 +18,12 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "proto:user": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto.cmd -I=../protos --ts_proto_out=src/user/ ../protos/user.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb"
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.6.8",
     "@nestjs/common": "^9.0.0",
-    "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
-    "@nestjs/microservices": "^9.0.5",
     "@nestjs/platform-express": "^9.0.0",
-    "class-transformer": "^0.5.1",
-    "class-validator": "^0.13.2",
-    "dynamoose": "^2.8.6",
-    "nestjs-dynamoose": "^0.4.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0"
@@ -56,7 +48,6 @@
     "ts-jest": "28.0.5",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
-    "ts-proto": "^1.120.0",
     "tsconfig-paths": "4.0.0",
     "typescript": "^4.3.5"
   },

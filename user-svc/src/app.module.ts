@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
+import { DynamooseModule } from 'nestjs-dynamoose';
 
 @Module({
-  imports: [UserModule],
+  imports: [DynamooseModule.forRoot(), UserModule],
   controllers: [],
   providers: [],
 })
-export class UserServiceModule {}
+export class AppModule {}

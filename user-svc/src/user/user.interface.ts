@@ -8,3 +8,12 @@ export interface IUser {
   email: string;
   adress: string;
 }
+
+export interface UserKey {
+  PK: string;
+}
+
+export interface User extends UserKey {
+  SK: string;
+  userId: string;
+}
